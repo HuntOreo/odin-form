@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Norse-bold";
+  src:
+  local('Norse-Bold'), 
+  url('./misc/Norse-Bold.woff');
+}
+
+.logo {
+  font-family: "Norse-bold", sans-serif;
+  font-size: 3.5rem;
+}
+
+.logo img {
+  background-color: #000;
+  height: 2em;
+}
