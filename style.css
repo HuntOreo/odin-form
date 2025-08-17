@@ -1,16 +1,51 @@
 @font-face {
   font-family: "Norse-bold";
   src:
-  local('Norse-Bold'), 
-  url('./misc/Norse-Bold.woff');
+    local('Norse-Bold'),
+    url('./misc/Norse-Bold.woff'),
+    url('./misc/Norse-Bold.woff2'),
+    url('./misc/Norse-Bold.otf');
+}
+
+body {
+  height: 100vh;
+}
+
+section {
+  height: 100vh;
 }
 
 .logo {
-  font-family: "Norse-bold", sans-serif;
-  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25vh;
+  
+  color: white;
+  font-family: 
+    "Norse-bold", 
+    system-ui, 
+    -apple-system, 
+    BlinkMacSystemFont, 
+    sans-serif;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .logo img {
-  background-color: #000;
-  height: 2em;
+  height: 2.5em;
+}
+
+.container {
+  display: flex;
+}
+
+section.hero {
+  flex: 1;
+  background-image: url('./img/fern.avif');
+  background-position: center;
+}
+
+section.content {
+  flex: 2;
 }
