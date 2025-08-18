@@ -179,7 +179,7 @@ form input {
   box-shadow: inset 0px 0px 3px lightgray;
 }
 
-form .touched:invalid {
+form input[class="touched"]:invalid {
   border: 1px solid red;
 }
 
