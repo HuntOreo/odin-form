@@ -74,17 +74,26 @@
 
   <script>
     const requiredInputs = document.querySelectorAll('input[required]');
+    const submit = document.querySelector('button');
+    const password = document.querySelector('#password');
+    const confirmedPassword = document.querySelector('#password-confirm');
+
+    submit.addEventListener('click', event => {
+      if ( password.value !== confirmedPassword.value ) {
+        event.preventDefault();
+        alert('Passwords do not match!');
+      }  
+    });
+
     function handleTouch(element) {
       if ( !element.classList.contains('touched') ) {
         element.classList.toggle('touched');
       }
-      
     }
 
     requiredInputs.forEach(input => {
       input.addEventListener('click', () => handleTouch(input));
-    })
-    
+    });
   </script>
 </body>
 </html>
