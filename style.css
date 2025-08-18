@@ -123,6 +123,7 @@ form fieldset {
   justify-content: center;
   gap: 10px;
   padding: 10px 25px;
+  position: relative;
 
   border: none;
   background-color: white;
@@ -132,6 +133,15 @@ form fieldset {
 form fieldset h3 {
   font-size: 1.45rem;
   font-weight: 600;
+  position: relative;
+}
+
+form fieldset::before {
+  content: "Required fields labeled *";
+  font-size: 0.7rem;
+  color: gray;
+  position: absolute;
+  bottom: 0;
 }
 
 form fieldset .wrapper {
@@ -147,11 +157,17 @@ form fieldset .form-row {
 
 form button {
   max-width: max-content;
-  padding: 0.6rem 2rem;
+  padding: 1rem 2.8rem;
   margin: 30px 50px;
   margin-left: 30px;
 
   font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #596d48;
+  border: none;
+  border-radius: 10px;
+
 }
 
 form input {
@@ -161,4 +177,18 @@ form input {
   border: 1px solid lightgray;
   border-radius: 5px;
   box-shadow: inset 0px 0px 3px lightgray;
+}
+
+form .touched:invalid {
+  border: 1px solid red;
+}
+
+.content > .container > p {
+  font-weight: 600;
+
+}
+
+.content > .container > p a {
+  text-decoration: none;
+  color: #596d48;
 }
